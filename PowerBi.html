@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power BI Roadmap: From Basic to Advanced</title>
+  <style>
+    /* Reset some basic elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    /* Tree based layout styles */
+    .roadmap {
+      list-style-type: none;
+      padding-left: 20px;
+      position: relative;
+    }
+    .roadmap li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+    .roadmap li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background: #3498db;
+      border-radius: 50%;
+    }
+    .roadmap li .day {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    .roadmap li .details {
+      margin: 5px 0 0 20px;
+      background: #ecf0f1;
+      padding: 10px;
+      border-left: 3px solid #3498db;
+      border-radius: 4px;
+    }
+    .toggle-btn {
+      cursor: pointer;
+      color: #3498db;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+    .hidden {
+      display: none;
+    }
+    /* Responsive styling */
+    @media(max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Power BI Roadmap: From Basic to Advanced</h1>
+    <p>This roadmap is designed to help you master Power BI with a dedicated two hours a day study plan. It includes daily topics, detailed explanations, and recommended resources to ensure you not only understand the features but become a Power BI master.</p>
+    
+    <ul class="roadmap">
+      <!-- Phase 1: Fundamentals -->
+      <li>
+        <span class="toggle-btn" onclick="toggleSection('phase1')">[+]</span> 
+        <h2>Phase 1: Fundamentals (Week 1)</h2>
+        <ul id="phase1" class="hidden">
+          <li>
+            <span class="day">Day 1: Introduction to Power BI</span>
+            <div class="details">
+              <p><strong>Topics:</strong> What is Power BI, Installing Power BI Desktop, Overview of components (Power BI Service, Power BI Report Server).</p>
+              <p><strong>Resources:</strong> Official Power BI documentation, Microsoft Learn, introductory YouTube tutorials.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Day 2: Getting Familiar with the Interface</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Power BI Desktop layout, Importing data (Excel, CSV, databases), Basic data transformations.</p>
+              <p><strong>Resources:</strong> Microsoft tutorials, community blogs, Power BI YouTube channels.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Day 3: Power Query Basics</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Introduction to Power Query Editor, Data cleaning (remove duplicates, split columns, replace values).</p>
+              <p><strong>Resources:</strong> Microsoft Learn, online courses on Power Query.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Day 4: Data Modeling Basics</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Relationships between tables, Star vs. Snowflake schema, Cardinality (One-to-One, One-to-Many, Many-to-Many).</p>
+              <p><strong>Resources:</strong> Blog posts on data modeling, official Power BI documentation.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Day 5: Introduction to DAX</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Calculated columns vs. measures, Basic DAX functions (SUM, AVERAGE, COUNT, DISTINCTCOUNT).</p>
+              <p><strong>Resources:</strong> DAX guides on SQLBI, Microsoft documentation, tutorials.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Day 6: Creating Your First Report</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Adding visuals (tables, bar charts, line charts), Formatting visuals for readability.</p>
+              <p><strong>Resources:</strong> Power BI blogs, YouTube walkthroughs.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Day 7: Hands-on Mini Project</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Importing a dataset and creating a simple dashboard to practice learned skills.</p>
+              <p><strong>Resources:</strong> Sample datasets from Kaggle, practice projects on community forums.</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+      
+      <!-- Phase 2: Intermediate -->
+      <li>
+        <span class="toggle-btn" onclick="toggleSection('phase2')">[+]</span> 
+        <h2>Phase 2: Intermediate Power BI (Weeks 2-3)</h2>
+        <ul id="phase2" class="hidden">
+          <!-- Week 2 -->
+          <li>
+            <h3>Week 2</h3>
+            <ul>
+              <li>
+                <span class="day">Day 8-9: Power Query Advanced Transformations</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Merging and appending queries, Unpivoting data.</p>
+                  <p><strong>Resources:</strong> Microsoft Learn articles, community examples.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 10-11: Deep Dive into DAX</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Advanced functions like IF, SWITCH, LOOKUPVALUE, RELATED, RELATEDTABLE.</p>
+                  <p><strong>Resources:</strong> SQLBI, Power BI community forums, online courses.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 12-13: Time Intelligence Functions</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> DATEADD, TOTALYTD, SAMEPERIODLASTYEAR, PARALLELPERIOD.</p>
+                  <p><strong>Resources:</strong> Microsoft documentation, YouTube tutorials.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 14: Case Study - Sales Dashboard</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Applying the week’s lessons into a practical case study to build a sales dashboard.</p>
+                  <p><strong>Resources:</strong> Real-world case studies, sample data sets online.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Week 3 -->
+          <li>
+            <h3>Week 3</h3>
+            <ul>
+              <li>
+                <span class="day">Day 15-16: Advanced Data Modeling</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Handling Many-to-Many relationships, Role-playing dimensions.</p>
+                  <p><strong>Resources:</strong> Advanced Power BI courses, blog articles.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 17-18: Advanced Visualizations</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Custom visuals, advanced tooltips, slicers, and drill-through pages.</p>
+                  <p><strong>Resources:</strong> Custom visual galleries, YouTube tutorials.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 19: Row-Level Security (RLS) Implementation</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Setting up and testing RLS to secure data within reports.</p>
+                  <p><strong>Resources:</strong> Microsoft documentation, community best practices.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 20-21: Mini Project - Sales Forecasting Dashboard</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Combine all intermediate skills into creating a dynamic sales forecasting dashboard.</p>
+                  <p><strong>Resources:</strong> Practice datasets, case study examples.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      
+      <!-- Phase 3: Advanced -->
+      <li>
+        <span class="toggle-btn" onclick="toggleSection('phase3')">[+]</span> 
+        <h2>Phase 3: Advanced Power BI (Weeks 4-6)</h2>
+        <ul id="phase3" class="hidden">
+          <!-- Week 4 -->
+          <li>
+            <h3>Week 4</h3>
+            <ul>
+              <li>
+                <span class="day">Day 22-23: Advanced DAX - Performance Optimization</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Using variables in DAX, iterator functions like SUMX, AVERAGEX for performance.</p>
+                  <p><strong>Resources:</strong> SQLBI, expert blogs, advanced courses.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 24-25: Performance Tuning & Optimization</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Query folding, optimizing data models for large datasets.</p>
+                  <p><strong>Resources:</strong> Microsoft documentation, performance tuning guides.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 26-27: Power BI Service (Cloud)</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Publishing reports, setting up scheduled refreshes, data gateways.</p>
+                  <p><strong>Resources:</strong> Power BI Service tutorials, Microsoft Learn.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Week 5 -->
+          <li>
+            <h3>Week 5</h3>
+            <ul>
+              <li>
+                <span class="day">Day 28-29: Power BI Paginated Reports</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Creating and managing paginated reports for pixel-perfect reporting.</p>
+                  <p><strong>Resources:</strong> Microsoft documentation, specialized courses.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 30-31: Power Automate and Power Apps Integration</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Automating workflows and integrating Power BI with Power Apps.</p>
+                  <p><strong>Resources:</strong> Microsoft Power Platform documentation, video tutorials.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 32-33: AI & Machine Learning in Power BI</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Incorporating AI visuals, using built-in ML capabilities.</p>
+                  <p><strong>Resources:</strong> Microsoft AI documentation, online courses.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 34-35: Power BI Administration & Governance</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Setting up administration tools, managing user access, and governance policies.</p>
+                  <p><strong>Resources:</strong> Enterprise Power BI guides, Microsoft documentation.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Week 6 -->
+          <li>
+            <h3>Week 6</h3>
+            <ul>
+              <li>
+                <span class="day">Day 36-37: Custom Visuals using Python & R</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Integrating Python/R visuals into Power BI for advanced data visualization.</p>
+                  <p><strong>Resources:</strong> Official documentation, community tutorials.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 38-39: Real-time Data Streaming</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Setting up real-time data feeds and dashboards in Power BI.</p>
+                  <p><strong>Resources:</strong> Power BI real-time streaming documentation, case studies.</p>
+                </div>
+              </li>
+              <li>
+                <span class="day">Day 40-42: Final Capstone Project</span>
+                <div class="details">
+                  <p><strong>Topics:</strong> Build an end-to-end project that combines all advanced skills. Choose a real-world dataset and build a comprehensive dashboard.</p>
+                  <p><strong>Resources:</strong> Kaggle datasets, enterprise case studies, community challenges.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      
+      <!-- Phase 4: Mastery & Real-World Application -->
+      <li>
+        <span class="toggle-btn" onclick="toggleSection('phase4')">[+]</span> 
+        <h2>Phase 4: Mastery & Real-World Application (Weeks 7-8)</h2>
+        <ul id="phase4" class="hidden">
+          <li>
+            <span class="day">Week 7: Real-World Practice</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Hands-on practice with public datasets (e.g., Kaggle) to build a Customer Retention Analysis Dashboard.</p>
+              <p><strong>Resources:</strong> Kaggle, Power BI community challenges.</p>
+            </div>
+          </li>
+          <li>
+            <span class="day">Week 8: Enterprise-Level Project & Certification Prep</span>
+            <div class="details">
+              <p><strong>Topics:</strong> Develop an end-to-end enterprise project, optimize dashboards, and prepare for Power BI Certification (DA-100/PL-300).</p>
+              <p><strong>Resources:</strong> Certification guides, practice exams, Microsoft documentation.</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <p style="margin-top:20px;">This roadmap not only covers all the necessary topics but also provides detailed explanations and recommended resources for each day. Click on the [+] buttons to expand or collapse each phase or week for a more interactive experience.</p>
+  </div>
+
+  <script>
+    // Toggle function for showing/hiding details
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section.classList.contains('hidden')) {
+        section.classList.remove('hidden');
+      } else {
+        section.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
